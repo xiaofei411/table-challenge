@@ -1,0 +1,21 @@
+th {
+    cursor: pointer;
+    padding: 10px;
+}
+td {
+    padding: 10px;
+}
+thead span {
+    float: right;
+}
+
+tbody tr:nth-child(even) {background: #FFF}
+tbody tr:nth-child(odd) {background: #CCC}
+
+.selected {
+    background-color: rgb(59, 92, 81);
+}
+
+.active {
+    background-color: green;
+}
