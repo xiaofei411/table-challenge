@@ -32,20 +32,13 @@ class Table extends React.Component {
 
         const {directions} = this.state;
 
-        if(directions[key] === true) {
-            return function (a, b) {
-                if (a[key] < b[key]) return -1;
-                if (a[key] > b[key]) return 1;
-                return 0;
-            };
-        }
-        else {
-            return function (a, b) {
-                if (a[key] > b[key]) return -1;
-                if (a[key] < b[key]) return 1;
-                return 0;
-            };
-        }
+        let dir = directions[key] ? 1 : -1;
+
+        return function (a, b) {
+            if (a[key] < b[key]) return -dir;
+            if (a[key] > b[key]) return dir;
+            return 0;
+        };
 
     }
    
